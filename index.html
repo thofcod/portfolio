@@ -124,8 +124,27 @@
                 max-width: 100%;
             }
 
-            .case-study {
+            /* Titles should stick to their content */
+            h1,
+            h2,
+            h3,
+            h4,
+            .subtitle {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            /* Content blocks shouldn't break inside */
+            .case-study,
+            ul,
+            li,
+            .contact-info,
+            p {
                 break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .case-study {
                 border: 1px solid #ddd;
             }
         }
