@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Figueiredo - Consultor Tasy & Oracle</title>
+    <!-- Fonte Moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0b5ed7;
+            --primary-dark: #0a4ebd;
+            --text-color: #333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero-text {
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            color: #666;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            background-color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        section.alt-bg {
+            background-color: var(--bg-light);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+        }
+
+        .skill-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .skill-card ul {
+            padding-left: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Cases */
+        .case-study {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.2s;
+        }
+
+        .case-study:hover {
+            transform: translateY(-5px);
+        }
+
+        .case-title {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .case-label {
+            font-weight: 600;
+            color: #444;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        /* Contact */
+        .contact-box {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            color: white;
+            justify-content: center;
+        }
+
+        .contact-box h2::before {
+            background-color: white;
+        }
+
+        .contact-links {
+            list-style: none;
+            margin-top: 20px;
+            padding: 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-links li {
+            margin-bottom: 10px;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Thiago Henrique de Oliveira Figueiredo</h1>
+            <div class="subtitle">Consultor Técnico de Implantação | Dados e Integrações (Tasy & Oracle)</div>
+            <p class="hero-text">
+                Especialista em transformar dados complexos em soluções eficientes no ambiente Philips Tasy.
+                Foco em Engenharia de Dados, Integrações e Automação de Processos.
+            </p>
+            <a href="#contact" class="cta-button">Entre em Contato</a>
+            <a href="portfolio_thiago_figueiredo.html" class="cta-button"
+                style="background-color: #333; margin-left: 10px;">Ver Versão PDF</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section id="about">
+            <h2>Proposta de Valor</h2>
+            <p>Atuo como profissional técnico com foco em dados e processos no ambiente <strong>Philips Tasy</strong>,
+                com vivência prática em projetos de implantação e sustentação em operadora de saúde (Unimed).</p>
+            <p>Tenho experiência desde o entendimento técnico das demandas de negócio até a execução de scripts, cargas
+                de dados, validações e documentação, atuando de forma integrada com analistas funcionais, times internos
+                e fornecedores.</p>
+        </section>
+
+        <section id="skills" class="alt-bg" style="border-radius: 12px; padding: 40px;">
+            <h2>Principais Competências</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Dados e Banco de Dados (Oracle)</h3>
+                    <ul>
+                        <li><strong>SQL e Manipulação de Dados:</strong> Queries complexas para análise e correção.</li>
+                        <li><strong>PL/SQL:</strong> Procedures, Functions, Packages, Triggers e Jobs.</li>
+                        <li><strong>Modelagem:</strong> Manutenção da integridade da base de dados.</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Implantação e Integração (Tasy)</h3>
+                    <ul>
+                        <li><strong>Migração de Dados:</strong> Scripts de limpeza e padronização.</li>
+                        <li><strong>Integrações:</strong> Validação técnica de interfaces (XML/Layouts).</li>
+                        <li><strong>Setup:</strong> Configuração técnica e customizações.</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Relatórios e Análises</h3>
+                    <ul>
+                        <li><strong>Extração de Dados:</strong> Suporte à decisão gerencial.</li>
+                        <li><strong>Automação:</strong> Saneamento de bases para indicadores operacionais.</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Documentação e Processos</h3>
+                    <ul>
+                        <li><strong>Requisitos:</strong> Especificação técnica e funcional.</li>
+                        <li><strong>Documentação:</strong> Dicionários de dados e roteiros técnicos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases">
+            <h2>Cases de Sucesso</h2>
+
+            <div class="case-study">
+                <span class="case-title">Case 1: Migração e Saneamento de Dados de Sistema Legado para o Philips
+                    Tasy</span>
+                <span class="case-label">Contexto:</span>
+                <p>Projeto de implantação do Philips Tasy envolvendo a migração de grandes volumes de dados provenientes
+                    de sistemas legados, com diferenças estruturais e regras de negócio distintas.</p>
+                <span class="case-label">Atuação:</span>
+                <ul>
+                    <li><strong>Participação técnica</strong> no mapeamento DE-PARA.</li>
+                    <li><strong>Desenvolvimento de scripts SQL e PL/SQL</strong> para saneamento e padronização.</li>
+                    <li><strong>Apoio na preparação das cargas</strong> e execução em ambientes controlados.</li>
+                </ul>
+                <span class="case-label">Impacto:</span>
+                <p>Melhoria significativa na qualidade dos dados migrados e maior segurança na validação funcional do
+                    ambiente Tasy.</p>
+            </div>
+
+            <div class="case-study">
+                <span class="case-title">Case 2: Automação e Envio de Eventos do eSocial após Virada para o Tasy</span>
+                <span class="case-label">Contexto:</span>
+                <p>Após a virada do sistema, a geração dos eventos do eSocial (S-1200, S-1210 e S-2300) parou devido a
+                    limitações na integração nativa. A situação gerou risco regulatório.</p>
+                <span class="case-label">Atuação:</span>
+                <ul>
+                    <li><strong>Engenharia de Dados (Oracle / PL/SQL):</strong> Desenvolvimento de procedures para
+                        extração e tratamento dos dados conforme layouts oficiais.</li>
+                    <li><strong>Solução de Integração Customizada:</strong> Aplicação em Python/React para orquestrar
+                        dados, gerar XMLs e validar envios.</li>
+                    <li><strong>Conformidade:</strong> Validação estrutural (XSD) e rastreabilidade dos eventos.</li>
+                </ul>
+                <span class="case-label">Impacto:</span>
+                <p>Restabelecimento do envio do eSocial, eliminação do processo manual e redução do risco regulatório.
+                </p>
+            </div>
+
+            <div class="case-study">
+                <span class="case-title">Case 3: Desenvolvimento de Relatórios Operacionais e Gerenciais
+                    Avançados</span>
+                <span class="case-label">Contexto:</span>
+                <p>Necessidade de relatórios confiáveis e performáticos para suportar áreas assistencial, auditoria e
+                    financeira.</p>
+                <span class="case-label">Atuação:</span>
+                <ul>
+                    <li><strong>Queries SQL complexas</strong> para extração consolidada.</li>
+                    <li><strong>Procedures PL/SQL</strong> para regras de negócio e cálculos.</li>
+                    <li><strong>Jobs automatizados</strong> para execução recorrente.</li>
+                </ul>
+                <span class="case-label">Impacto:</span>
+                <p>Relatórios performáticos e alinhados às regras de negócio, maior autonomia das áreas.</p>
+            </div>
+
+            <div class="case-study">
+                <span class="case-title">Case 4: Automação do Fluxo de Requisições OPME para Ordens de Serviços</span>
+                <span class="case-label">Contexto:</span>
+                <p>Processo manual para tratamento de requisições de OPME, gerando retrabalho e atrasos na criação de
+                    OS.</p>
+                <span class="case-label">Atuação:</span>
+                <ul>
+                    <li>Desenvolvimento de rotinas em <strong>PL/SQL</strong> para automatizar o pipeline.</li>
+                    <li>Automatização do cadastro das requisições e geração de OS.</li>
+                </ul>
+                <span class="case-label">Impacto:</span>
+                <p>Redução de atividades manuais e melhoria no tempo de resposta operacional.</p>
+            </div>
+
+            <div class="case-study">
+                <span class="case-title">Case 5: Documentação Técnica e Apoio à Comunicação entre Negócio e TI</span>
+                <span class="case-label">Contexto:</span>
+                <p>Divergências de entendimento entre regras de negócio e a persistência de dados no Oracle.</p>
+                <span class="case-label">Atuação:</span>
+                <ul>
+                    <li><strong>Análise direta</strong> das tabelas e campos.</li>
+                    <li><strong>Documentação objetiva</strong> com regras de cálculo e queries de apoio.</li>
+                    <li><strong>Registro de scripts</strong> para facilitar manutenção.</li>
+                </ul>
+                <span class="case-label">Impacto:</span>
+                <p>Redução de ambiguidades técnicas e menor retrabalho em ajustes.</p>
+            </div>
+
+        </section>
+
+        <section id="contact">
+            <div class="contact-box">
+                <h2>Vamos conversar?</h2>
+                <p>Estou à disposição para detalhar tecnicamente estes cases e discutir como posso apoiar seus desafios.
+                </p>
+                <ul class="contact-links">
+                    <li>E-mail: <a href="mailto:thof@ic.ufal.br">thof@ic.ufal.br</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/thiago-figueiredoo"
+                            target="_blank">linkedin.com/in/thiago-figueiredoo</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="model" style="text-align: center; font-size: 0.9rem; color: #777;">
+            <p><strong>Modelo de Atuação:</strong> Prestação de Serviços (PJ) • Remoto</p>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
